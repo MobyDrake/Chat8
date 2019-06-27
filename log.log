@@ -1,0 +1,9 @@
+
+20:03:30.002 [main] INFO  Server.MyServer - Сервер запущен
+20:03:42.135 [main] INFO  Server.MyServer - Клиент подключился
+20:05:52.799 [main] INFO  Server.MyServer - Сервер запущен
+20:06:00.839 [main] INFO  Server.MyServer - Клиент подключился
+20:06:07.652 [Thread-1] INFO  Server.ClientHandler - Клиент отключился
+20:09:17.550 [main] INFO  Server.MyServer - Сервер запущен
+20:24:14.292 [main] INFO  Server.MyServer - Сервер запущен
+21:41:31.237 [main] INFO  Server.MyServer - Сервер запущен
