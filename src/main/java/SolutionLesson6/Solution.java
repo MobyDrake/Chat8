@@ -41,4 +41,29 @@ public class Solution {
         }
     }
 
+    public static boolean containOneAndFour(int[] mass) {
+
+        int cont1 = 0;
+        int cont4 = 0;
+        boolean ourNum = true;
+        int i =0;
+
+        while(i < mass.length && ourNum) {
+            if (mass[i] == 1) {
+                ourNum = true;
+                cont1++;
+            } else {
+                if (mass[i] == 4) {
+                    ourNum = true;
+                    cont4++;
+                } else {
+                    ourNum = false;
+                }
+            }
+            i++;
+        }
+        return  ourNum && cont1 > 0 && cont4 > 0;
+    }
+
+
 }

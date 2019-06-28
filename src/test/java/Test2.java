@@ -1,5 +1,6 @@
 import SolutionLesson6.Solution;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -7,22 +8,22 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class Test {
-
+public class Test2 {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                {new int[]{1, 2}, new int[]{1,2,4,4,2,3,4,1,7}},
-                {new int[]{1, 7}, new int[]{1,2,4,4,2,3,4,1,7}},
-                {new int[]{1,2,3},new int[]{1,2,2,3,1,7}},
+                {true, new int[]{1, 1, 1, 4, 4, 1, 4, 4}},
+                {false, new int[]{1, 1, 1, 1, 1, 1}},
+                {false, new int[]{4, 4, 4, 4 }},
+                {false, new int[]{1, 4, 4, 1, 1, 4, 3}},
         });
     }
 
-    private int[] a;
+    private boolean a;
     private int[] b;
     private Solution solution;
 
-    public Test(int[] a, int[] b) {
+    public Test2(boolean a, int[] b) {
         this.a = a;
         this.b = b;
     }
@@ -34,6 +35,6 @@ public class Test {
 
     @org.junit.Test
     public void testT1() {
-        Assert.assertArrayEquals(a, solution.massFor4(b));
+        Assert.assertEquals(a, solution.containOneAndFour(b));
     }
 }
